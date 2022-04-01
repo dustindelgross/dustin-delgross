@@ -1,0 +1,239 @@
+/*-------------------------------------------------------------- 
+# Navigation
+--------------------------------------------------------------*/
+/* Make sure logo link wraps around logo image. */
+
+
+.main-navigation {
+	display: block;
+	width: 100%;
+}
+
+.main-navigation ul {
+
+	list-style: none;
+	margin: 0;
+	padding-left: 0;
+}
+
+.main-navigation ul ul li:hover > ul,
+.main-navigation ul ul li.focus > ul {
+	display: block;
+	left: auto;
+}
+
+.main-navigation ul ul a {
+	width: 200px;
+}
+
+.main-navigation ul li:hover > ul,
+.main-navigation ul li.focus > ul {
+	left: auto;
+}
+
+.main-navigation li {
+	position: relative;
+}
+
+.main-navigation a {
+	display: block;
+	text-decoration: none;
+}
+
+/*Menu Sidebar*/
+
+.menu-wrap {
+	background-color: var(--darkgrey);
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	display:none;
+	font-size: 1em;
+	font-weight: 700;
+	overflow: auto;
+	top:0;
+	z-index: 10;
+}
+
+.menu-show {
+
+}
+
+.menu-box {
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	z-index:8;
+	width:100%;
+	height:100%;
+	flex-flow:column wrap;
+}
+.menu {
+	width:300px;
+	height:300px;
+	max-width:90%;
+	max-height:90%;
+/*	display:flex;
+	align-items:center;
+	justify-content:center;
+	flex-flow:column wrap;*/
+}
+.menu-box li {
+	display:block;
+	flex:0 0 20px;
+	width:100%;
+}
+.menu-box li > a {
+	color: #ffffff;
+	text-transform:uppercase;
+	font-size:40px;
+}
+.menu-box li > a::after {
+	content: "";
+	display: block;
+	height: 0.15em;
+	width: 100%;
+	background-image: linear-gradient(to right, transparent 50.3%, #dcc699 50.3%);
+	transition: background-position .2s .1s ease-in-out;
+	background-size: 200% auto;
+}
+.menu-box li > a:hover::after {
+	background-position: -100% 0;
+}
+.menu-box .menu-item-has-children {
+	position: relative;
+}
+.menu-box .menu-item-has-children .sub-menu {
+	display: none;
+}
+.sidebar-menu-arrow::after {
+	content: "\f107";
+	font-family: 'FontAwesome';
+	padding: 10px;
+	color: #FFFA3B;
+	position: relative;
+}
+.sidebar-menu-arrow:hover::after {
+	cursor: pointer;
+	color: #fff;
+}
+.sidebar-menu-arrow:active::after {
+	top: 2px;
+}
+
+.site-branding {
+	display:block;
+	position:relative;
+	min-width:100px;
+	width:100%;
+	max-width:300px;
+}
+
+.custom-logo-link {
+	display:inline-block;
+	width:100%;
+	padding:1.25rem;
+}
+
+#masthead {
+	position:fixed;
+	display:flex;
+	width:100%;
+	flex-flow: row nowrap;
+	justify-content:center;
+	align-items:center;
+	top:0;
+	left:0;
+	right:0;
+	background-color:white;
+	z-index:15;
+}
+
+.site-title a {
+	font-size:1.5rem;
+	font-weight:lighter;
+	color:#474c55;
+	text-decoration:none;
+}
+
+/*Navigation Wrapper*/
+.main-navigation {
+	display:flex;
+	justify-content:flex-end;
+}
+
+/*Toggle Button Container*/
+.menu-toggle {
+	width: 3rem;
+	height: 3rem;
+	transition: .25s;
+	z-index: 15;
+	justify-content:center;
+	align-items:flex-end;
+	display:flex;
+	flex-direction:column;
+	margin-right:1rem;
+}
+.menu-toggle:hover {
+	cursor: pointer;
+}
+
+/*Menu Button Bar Styles*/
+.menu-toggle .menu-bar {
+	border-radius: 3rem;
+	transition: .25s ease-in-out;
+
+}
+
+.menu-toggle .menu-bar-top {
+	height:3px;
+	background-color:#474c55;
+	width:50%;
+}
+
+.menu-toggle:hover .menu-bar-top {
+	width:100%
+}
+
+.menu-toggle .menu-bar-middle {
+	margin-top: .5rem;
+	margin-bottom: .5rem;
+	height:3px;
+	background-color:#474c55;
+	width:75%;
+}
+
+.menu-toggle:hover .menu-bar-middle {
+	width:100%
+}
+
+.menu-toggle .menu-bar-bottom {
+	background-color:#474c55;
+	height:3px;
+	width:100%;
+}
+
+.button-open {
+
+}
+
+.button-open .menu-bar-top {
+	background-color: #fff;
+	transform: rotate(45deg) translate(8px,8px);
+	transition: .25s ease-in-out;
+	width:100%;
+}
+
+.button-open .menu-bar-middle {
+	background-color: #fff;
+	transform: translate(100px);
+	transition: .1s ease-in-out;
+	opacity: 0;
+}
+
+.button-open .menu-bar-bottom {
+	background-color: #fff;
+	transform: rotate(-45deg) translate(8px,-7px);
+	transition: .25s ease-in-out;
+	width:100%;
+}

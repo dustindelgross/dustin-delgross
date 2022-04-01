@@ -1,0 +1,17 @@
+.welcome-wrapper {
+	width:100vw;
+	height:100vh;
+	z-index:999;
+	position:fixed;
+	top:0;
+	left:0;
+	margin:0;
+	filter:brightness(.5);
+	background-image:url(http://dustindelgross.dev.cc/wp-content/uploads/2022/01/birds-scaled.jpg);
+	background-size:cover;
+	background-position:center;
+}
+
+.wp-image-97 {
+clip-path:path('282.82 0 94.28 0 0 163.29 94.28 326.58 282.82 326.58 377.1 163.29 282.82 0');
+}
